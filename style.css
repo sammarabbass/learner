@@ -1,0 +1,69 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+ body{
+    background-image: url(https://images.unsplash.com/photo-1508138221679-760a23a2285b?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    background-size: 100%,100%;
+} 
+
+img{
+    width: 1500px;
+
+}
+
+h1{
+color: white;
+font-weight: bold;
+text-align: center;
+margin-top: 20%;
+letter-spacing: 4px;
+font-size: 50px;
+font-family: 'Times New Roman', Times, serif;
+}
+p{
+    color: white;
+    text-align: center;
+
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+a{
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center; 
+    margin-top: 50px;
+    font-size: 20px;
+    padding: 15px 20px; 
+    border: 2px solid white;
+    background-color: transparent;
+    border-radius: 15px;
+}
+
+.less{
+    
+    background-color: gainsboro;
+    display: inline;
+    align-items: end;
+    margin-left: 90%;
+    font-size: 25px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.great{
+    background-color: gainsboro;
+    display: inline;
+        font-size: 25px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
