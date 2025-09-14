@@ -4,15 +4,20 @@
 }
 
  body{
-    display: flexbox;
-    background-image: url(https://images.unsplash.com/photo-1508138221679-760a23a2285b?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    background-repeat: no-repeat;
-    background-size: 100%,100%;
+      display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('https://images.unsplash.com/photo-1508138221679-760a23a2285b?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
 } 
 
 img{
-    width: 1500px;
-
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 h1{
@@ -21,7 +26,7 @@ font-weight: bold;
 text-align: center;
 margin-top: 20%;
 letter-spacing: 4px;
-font-size: 50px;
+font-size: 50px;    
 font-family: 'Times New Roman', Times, serif;
 }
 p{
@@ -31,40 +36,78 @@ p{
 }
 
 .button{
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+      display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 a{
-    margin-right: 20px;
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center; 
-    margin-top: 50px;
-    font-size: 20px;
-    padding: 15px 20px; 
-    border: 2px solid white;
-    background-color: transparent;
-    border-radius: 15px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+  padding: 15px 20px;
+  border: 2px solid white;
+  background-color: transparent;
+  border-radius: 15px;
 }
 
-.less{
-    
-    background-color: gainsboro;
-    display: inline;
-    align-items: end;
-    margin-left: 90%;
-    font-size: 25px;
-    padding: 8px 15px;
-    cursor: pointer;
+
+.rating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 1000; /* So it stays on top */
 }
 
-.great{
-    background-color: gainsboro;
-    display: inline;
-        font-size: 25px;
-    padding: 8px 15px;
-    cursor: pointer;
+.less,
+.great {
+  background-color: gainsboro;
+  font-size: 18px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+
+/* Styles for screens up to 768px wide (e.g., tablets and mobile) */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  .container {
+    width: 90%;
+    padding: 10px;
+  }
+}
+
+/* Styles for screens up to 480px wide (e.g., mobile phones) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+  nav ul li {
+    display: block; /* Stack navigation items vertically */
+  }
+
+
+
+
+      .less, .great {
+        font-size: 14px;
+        padding: 8px 10px;
+      }
+
+
+        .rating-buttons {
+        bottom: 10px;
+        right: 10px;
+        gap: 5px;
+
+}
 }
